@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testTask">
+<head>
+    <meta charset="utf-8">
+    <title>Trekking-shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="app.css?v=01">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-controller="productsCtrl" class="wrapper">
+        <!-- Home screen -->
+        <div class="home">
+            <header class="home-header clearfix">
+                <a ng-href="#" class="main-logo"></a>
+                <nav class="header-nav">
+                    <ul class="header-nav-list">
+                        <li><a class="header-nav-item" ng-href="#">Home</a></li>
+                        <li><a class="header-nav-item" ng-href="#content" du-smooth-scroll>Product</a></li>
+                        <li><a class="header-nav-item nav-item-cart" ng-class="{active: checkActive()}" ng-href="#"></a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="home-caption">
+                <h1>Our clothing , your comfort</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <a class="to-items" ng-href="#content" du-smooth-scroll></a>
+        </div>
+        <!-- Products filter -->
+        <div id="content" class="filter">
+            <ul class="filter-list">
+                <li class="fliter-item">
+                    <label>
+                        <span>men</span>
+                        <input type="checkbox" ng-model="showCategory.men" ng-value="showCategory.men">
+                        <div class="check-box"></div>
+                    </label>
+                </li>
+                <li class="fliter-item">
+                    <label>
+                        <span>women</span>
+                        <input type="checkbox" ng-model="showCategory.women" ng-value="showCategory.women">
+                        <div class="check-box"></div>
+                    </label>
+                </li>
+                <li class="fliter-item">
+                    <label>
+                        <span>childRobotoren</span>
+                        <input type="checkbox" ng-model="showCategory.child" ng-value="showCategory.child">
+                        <div class="check-box"></div>
+                    </label>
+                </li>
+            </ul>
+            <button type="button" class="filter-reset" ng-click="reset()">see all prodRobotoucts</button>
+        </div>
+        <!-- Products items -->
+        <div class="products">
+            <div class="product-item"
+                 ng-class="{active: item.active}"
+                 ng-repeat="item in data.items | filter: categoryFlter track by $index"
+                 ng-click="item.active = !item.active">
+                <div class="product-item-option">
+                    <span>{{item.options[0]}}</span>
+                </div>
+                <img ng-src="assets/images/{{item.img}}.png">
+                <div class="product-item-info clearfix">
+                    <span class="product-item-info-name">{{item.name}}</span>
+                    <span class="product-item-info-price">{{(item.price | number:2) + "€"}}</span>
+                </div>
+            </div>
+        </div>
+        <!-- Twitter -->
+        <div class="twitter">
+            <a class="twitter-link" ng-href="https://twitter.com"></a>
+            <p class="twitter-note">"E-commerce psd theme available"</p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer ng-controller="menuCtrl" class="footer clearfix">
+        <div class="footer-description">
+            <h3>Trekking</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="footer-menu">
+            <ul>
+                <li ng-repeat="option in data.footerMenu track by $index">
+                    <a ng-href="{{option.link}}" class="footer-menu-option">{{option.title}}</a>
+                </li>
+            </ul>
+            <p class="design-info">Design by gianluca cosetta</p>
+        </div>
+    </footer>
+</body>
+</html>

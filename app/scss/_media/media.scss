@@ -1,0 +1,86 @@
+@media only screen and (max-width: 920px) {
+  .filter {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .products {
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 0px;
+    padding-bottom: 35px;
+  }
+  .product-item {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .home-caption h1 {
+    font-size: 50px;
+  }
+  .filter {
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+  }
+  .filter-reset {
+    float: none;
+    margin-top: 30px;
+  }
+  .footer {
+    padding: 30px 5px;
+    text-align: center;
+  }
+  .footer-description,
+  .footer-menu {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+  .twitter {
+    padding-left: 0px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-header {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .home-caption h1 {
+    font-size: 40px;
+  }
+  .products {
+    padding-left: 0px;
+    padding-bottom: 0px;
+  }
+  .product-item {
+    margin-right: 0px;
+    margin-bottom: 35px;
+  }
+  .fliter-item {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .header-nav-list li {
+    margin-right: 35px;
+  }
+  .fliter-item {
+    margin-right: 10px;
+    label {
+      padding-left: 27px;
+    }
+    span {
+      font-size: 14px;
+      letter-spacing: -0.5px;
+    }
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+}

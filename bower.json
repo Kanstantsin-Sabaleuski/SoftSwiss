@@ -1,0 +1,11 @@
+{
+  "name": "trekking-shop",
+  "description": "trekking-shop",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.6.4",
+    "angular-animate": "1.6.4",
+    "angular-scroll": "latest"
+  }
+}

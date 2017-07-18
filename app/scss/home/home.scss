@@ -1,0 +1,80 @@
+.home {
+  position: relative;
+  min-width: 100%;
+  min-height: 100vh;
+  color: $white;
+  // background: url(../../assets/images/home_background_overlay.png) no-repeat center;
+  background: linear-gradient(0deg,rgba(43,43,43,0.5),rgba(43,43,43,0.5)), url(../../assets/images/home_background_original.png) no-repeat center;
+  background-size: cover;
+}
+.home-header {
+  padding-top: 40px;
+  padding-left: 65px;
+  padding-right: 65px;
+}
+.main-logo {
+  display: inline-block;
+  width: 53px;
+  height: 40px;
+  background: url(../../assets/icons/logo.svg) no-repeat center;
+  background-size: contain;
+}
+.header-nav {
+  float: right;
+}
+.header-nav-list {
+  li {
+    display: inline-block;
+    margin-right: 60px;
+    vertical-align: middle;
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+}
+.header-nav-item {
+  display: block;
+  color: $white;
+  font-size: 18px;
+  &.nav-item-cart {
+    width: 24px;
+    height: 20px;
+    background: url(../../assets/icons/cart.svg) no-repeat center;
+    background-size: contain;
+    &.active {
+      background-image: url(../../assets/icons/cart-sand.svg);
+    }
+  }
+}
+.home-caption {
+  position: absolute;
+  top: -10%;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  height: 1px;
+  min-height: 150px;
+  margin: auto;
+  text-align: center;
+  h1 {
+    font-size: 60px;
+    margin-bottom: 18px;
+  }
+  p {
+    max-width: 520px;
+    margin: auto;
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+.to-items {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 5%;
+  width: 34px;
+  height: 22px;
+  margin: auto;
+  background: url(../../assets/icons/chevron-down.svg) no-repeat center;
+  background-size: contain;
+}

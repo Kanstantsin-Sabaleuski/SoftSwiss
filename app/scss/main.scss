@@ -1,0 +1,35 @@
+/* Colors palette */
+$white: #ffffff;
+$light-grey: #f5f6f7;
+$grey: #cccccc;
+$dark-grey: #424242;
+$filter-dark-grey: #333333;
+$twitter-background: #535253;
+$black: #000000;
+$sand: #aa9b77;
+
+/* Fonts */
+$main-font: 'Roboto', Arial, sans-serif;
+
+/* Main*/
+body, html {
+    min-width: 320px;
+    height: 100%;
+    font-family: $main-font;
+    font-size: 0px;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a {
+  text-decoration: none;
+}

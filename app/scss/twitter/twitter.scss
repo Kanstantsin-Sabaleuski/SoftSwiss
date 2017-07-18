@@ -1,0 +1,24 @@
+.twitter {
+  height: 72px;
+  padding-left: 64px;
+  line-height: 72px;
+  background-color: $twitter-background;
+}
+.twitter-link {
+    display: inline-block;
+    width: 29px;
+    height: 24px;
+    vertical-align: middle;
+    background: url(../../assets/icons/twitter-grey.svg) no-repeat center;
+    background-size: contain;
+    &:hover {
+        background-image: url(../../assets/icons/twitter-blue.svg);
+    }
+}
+.twitter-note {
+    display: inline-block;
+    margin-left: 20px;
+    color: $white;
+    font-size: 16px;
+    vertical-align: middle;
+}
