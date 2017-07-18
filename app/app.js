@@ -76,6 +76,15 @@ app.controller('productsCtrl', ['$scope', function ($scope) {
         return $scope.data.items.find( function(item) { return item.active });
     }
 
+    $scope.data.items.forEach( function(item) {
+        item.currentOption = item.options[0];
+    });
+
+    $scope.itemOptions = function(item, option) {
+        item.showOptions = !item.showOptions;
+        option ? item.currentOption = option : null;
+    }
+
 }]);
 
 

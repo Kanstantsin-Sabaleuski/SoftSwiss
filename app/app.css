@@ -270,21 +270,23 @@ a {
     font-size: 16px;
     color: #000000; }
 
-.product-item-option {
+.product-item-option-wrapper {
   height: 50px;
   line-height: 50px;
   margin-bottom: 20px;
   text-align: left; }
-  .product-item-option span {
-    position: relative;
-    display: inline-block;
-    padding-right: 20px;
-    color: #424242;
-    font-size: 16px;
-    line-height: 1;
-    text-transform: uppercase;
-    vertical-align: middle; }
-    .product-item-option span:after {
+
+.product-item-option {
+  position: relative;
+  display: inline-block;
+  color: #424242;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  vertical-align: middle; }
+  .product-item-option.chevron {
+    padding-right: 20px; }
+    .product-item-option.chevron:after {
       content: '';
       position: absolute;
       top: 0px;
@@ -295,6 +297,8 @@ a {
       height: 8px;
       background: url(../../assets/icons/chevron-down-small.svg) no-repeat center;
       background-size: contain; }
+  .product-item-option:hover {
+    color: #aa9b77; }
 
 .product-item-info {
   position: absolute;
@@ -317,29 +321,6 @@ a {
   float: right;
   color: #424242;
   font-size: 22px; }
-
-.twitter {
-  height: 72px;
-  padding-left: 64px;
-  line-height: 72px;
-  background-color: #535253; }
-
-.twitter-link {
-  display: inline-block;
-  width: 29px;
-  height: 24px;
-  vertical-align: middle;
-  background: url(../../assets/icons/twitter-grey.svg) no-repeat center;
-  background-size: contain; }
-  .twitter-link:hover {
-    background-image: url(../../assets/icons/twitter-blue.svg); }
-
-.twitter-note {
-  display: inline-block;
-  margin-left: 20px;
-  color: #ffffff;
-  font-size: 16px;
-  vertical-align: middle; }
 
 @media only screen and (max-width: 920px) {
   .filter {
@@ -404,3 +385,26 @@ a {
       letter-spacing: -0.5px; }
     .fliter-item:last-of-type {
       margin-right: 0px; } }
+
+.twitter {
+  height: 72px;
+  padding-left: 64px;
+  line-height: 72px;
+  background-color: #535253; }
+
+.twitter-link {
+  display: inline-block;
+  width: 29px;
+  height: 24px;
+  vertical-align: middle;
+  background: url(../../assets/icons/twitter-grey.svg) no-repeat center;
+  background-size: contain; }
+  .twitter-link:hover {
+    background-image: url(../../assets/icons/twitter-blue.svg); }
+
+.twitter-note {
+  display: inline-block;
+  margin-left: 20px;
+  color: #ffffff;
+  font-size: 16px;
+  vertical-align: middle; }

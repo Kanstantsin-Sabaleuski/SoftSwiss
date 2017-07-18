@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Trekking-shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="app.css?v=01">
     <script src="bower_components/angular/angular.js"></script>
@@ -37,21 +38,21 @@
                 <li class="fliter-item">
                     <label>
                         <span>men</span>
-                        <input type="checkbox" ng-model="showCategory.men" ng-value="showCategory.men">
+                        <input type="checkbox" ng-model="showCategory.men">
                         <div class="check-box"></div>
                     </label>
                 </li>
                 <li class="fliter-item">
                     <label>
                         <span>women</span>
-                        <input type="checkbox" ng-model="showCategory.women" ng-value="showCategory.women">
+                        <input type="checkbox" ng-model="showCategory.women">
                         <div class="check-box"></div>
                     </label>
                 </li>
                 <li class="fliter-item">
                     <label>
                         <span>childRobotoren</span>
-                        <input type="checkbox" ng-model="showCategory.child" ng-value="showCategory.child">
+                        <input type="checkbox" ng-model="showCategory.child">
                         <div class="check-box"></div>
                     </label>
                 </li>
@@ -64,8 +65,13 @@
                  ng-class="{active: item.active}"
                  ng-repeat="item in data.items | filter: categoryFlter track by $index"
                  ng-click="item.active = !item.active">
-                <div class="product-item-option">
-                    <span>{{item.options[0]}}</span>
+                <div class="product-item-option-wrapper">
+                    <span class="product-item-option chevron" ng-click="itemOptions(item); $event.stopPropagation();">{{item.currentOption}}</span>
+                    <ul ng-show="item.showOptions">
+                        <li ng-repeat="option in item.options track by $index">
+                            <span class="product-item-option" ng-click="itemOptions(item, option); $event.stopPropagation();">{{option}}</span>
+                        </li>
+                    </ul>
                 </div>
                 <img ng-src="assets/images/{{item.img}}.png">
                 <div class="product-item-info clearfix">
